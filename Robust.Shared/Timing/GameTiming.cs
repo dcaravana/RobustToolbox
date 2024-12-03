@@ -113,6 +113,8 @@ namespace Robust.Shared.Timing
         /// </summary>
         public double FramesPerSecondAvg => CalcFpsAvg();
 
+        public double Ping { get; set; }
+
         /// <summary>
         ///     The current simulation tick being processed.
         /// </summary>

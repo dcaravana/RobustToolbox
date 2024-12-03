@@ -28,7 +28,8 @@ namespace Robust.Client.UserInterface.CustomControls
             }
 
             var fps = _gameTiming.FramesPerSecondAvg;
-            TextMemory = FormatHelpers.FormatIntoMem(_textBuffer, $"FPS: {fps:N0}");
+            var ping = _gameTiming.Ping;
+            TextMemory = FormatHelpers.FormatIntoMem(_textBuffer, $"FPS: {fps:N0} PING: {ping:N0}");
         }
     }
 }

@@ -446,6 +446,7 @@ namespace Robust.Client.GameStates
             DebugTools.Assert(_timing.InSimulation);
 
             var ping = (_network.ServerChannel?.Ping ?? 0) / 1000f + PredictLagBias; // seconds.
+            _timing.Ping = ping;
             var predictionTarget = _timing.LastProcessedTick + (uint) (_processor.TargetBufferSize + Math.Ceiling(_timing.TickRate * ping) + PredictTickBias);
 
             if (IsPredictionEnabled)
